@@ -2,10 +2,183 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Jasoon Films</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jason Pérez - Fotografo Profesional - </title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Open+Sans&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    header {
+      background: url('https://source.unsplash.com/1600x600/?photography') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.7);
+      text-align: center;
+    }
+
+    header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+    }
+
+    nav {
+      background-color: #111;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #f4c542;
+    }
+
+    .section {
+      max-width: 1100px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+    .about {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .about img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-top: 1rem;
+      border: 4px solid #ccc;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1rem;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .contact {
+      background-color: #333;
+      color: white;
+      padding: 2rem;
+      text-align: center;
+      border-radius: 8px;
+    }
+
+    .social-links {
+      margin-top: 1.5rem;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .social-links a img {
+      width: 32px;
+      height: 32px;
+      filter: invert(100%);
+      transition: transform 0.3s ease, filter 0.3s ease;
+    }
+
+    .social-links a:hover img {
+      transform: scale(1.2);
+      filter: invert(72%) sepia(100%) saturate(700%) hue-rotate(10deg);
+    }
+
+    footer {
+      text-align: center;
+      padding: 1rem;
+      font-size: 0.9rem;
+      background-color: #222;
+      color: #aaa;
+      margin-top: 2rem;
+    }
+
+    @media screen and (max-width: 600px) {
+      header h1 {
+        font-size: 2rem;
+        padding: 0 1rem;
+      }
+    }
+  </style>
 </head>
 <body>
-  <h1>¡Hola, mundo!</h1>
-  <p>Esta es mi página web Jasoon Films.</p>
+
+  <header>
+    <h1>Jason Pérez - Fotógrafo</h1>
+  </header>
+
+  <nav>
+    <a href="#about">Sobre mí</a>
+    <a href="#portfolio">Portafolio</a>
+    <a href="#contact">Contacto</a>
+  </nav>
+
+  <section class="section about" id="about">
+    <h2>Sobre mí</h2>
+    <p>Soy un fotógrafo apasionado por capturar momentos únicos, desde paisajes hasta retratos íntimos. Mi trabajo busca contar historias visuales auténticas y emotivas.</p>
+    <img src="https://source.unsplash.com/150x150/?portrait" alt="Foto de Jason Pérez">
+  </section>
+
+  <section class="section" id="portfolio">
+    <h2>Portafolio</h2>
+    <div class="gallery">
+      <img src="https://source.unsplash.com/400x400/?nature" alt="Naturaleza">
+      <img src="https://source.unsplash.com/400x400/?wedding" alt="Boda">
+      <img src="https://source.unsplash.com/400x400/?urban" alt="Urbano">
+      <img src="https://source.unsplash.com/400x400/?portrait" alt="Retrato">
+      <img src="https://source.unsplash.com/400x400/?travel" alt="Viajes">
+      <img src="https://source.unsplash.com/400x400/?architecture" alt="Arquitectura">
+    </div>
+  </section>
+
+  <section class="section contact" id="contact">
+    <h2>Contacto</h2>
+    <p>Puedes escribirme a <strong>jasonperez@f.com</strong> o seguirme en redes sociales para ver más de mi trabajo.</p>
+
+    <div class="social-links">
+      <a href="https://instagram.com/jasoonfilms" target="_blank" aria-label="Instagram">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/instagram.svg" alt="Instagram">
+      </a>
+      <a href="https://youtube.com/@jasoonfilms" target="_blank" aria-label="YouTube">
+        <img src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/youtube.svg" alt="YouTube">
+      </a>
+    </div>
+  </section>
+
+  <footer>
+    &copy; 2025 JPérez - Todos los derechos reservados.
+  </footer>
+
 </body>
 </html>
