@@ -154,16 +154,25 @@
 
 </a>
   <center>
-  <form action="https://www.paypal.com/donate" method="post" target="_blank">
-  <input type="hidden" name="hosted_button_id" value="TU_ID_DE_BOTON">
-  <input type="submit" value="Donar con PayPal" style="background-color:#0070ba; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
-</form>
+  <h2>Pagar con PayPal</h2>
+  <label for="monto">Ingresa el monto a pagar (USD):</label><br><br>
+  <input type="number" id="monto" min="1" step="0.01" placeholder="Ej: 10.00"><br><br>
 
-  <a href="https://www.paypal.me/j3ffpr/10" target="_blank">
-  <button style="background-color:#0070ba; color:white; padding:10px 20px; border:none; border-radius:5px; font-size:16px;">
-    Pagar con PayPal
-  </button>
-  </a>
+  <button onclick="pagar()">Pagar con PayPal</button>
+
+  <script>
+    function pagar() {
+      const monto = document.getElementById("monto").value;
+      if (!monto || parseFloat(monto) <= 0) {
+        alert("Por favor ingresa un monto válido.");
+        return;
+      }
+
+      // Reemplaza "TUNOMBRE" con tu nombre de usuario de PayPal.Me
+      const url = `https://www.paypal.me/j3ffpr/${monto}`;
+      window.open(url, '_blank');
+    }
+  </script>
     <center/>
   <!--
   <section class="section" id="portfolio">
