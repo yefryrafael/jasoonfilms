@@ -172,6 +172,14 @@
       const url = `https://www.paypal.me/j3ffpr/${monto}`;
       window.open(url, '_blank');
     }
+  
+  document.addEventListener('contextmenu', e => e.preventDefault());
+  document.onkeydown = function(e) {
+    if (e.key === "F12" || (e.ctrlKey && e.shiftKey && e.key === "I")) {
+      return false;
+    }
+  };
+
   </script>
     <center/>
   <!--
